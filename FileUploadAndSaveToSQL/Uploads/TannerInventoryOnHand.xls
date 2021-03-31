@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<Author>NetSuite</Author>
+<LastAuthor>NetSuite</LastAuthor>
+<Company>NetSuite</Company>
+</DocumentProperties>
+<Styles>
+<Style ss:ID="company">
+<Alignment ss:Horizontal="Center"/>
+<Font ss:Bold="1"/>
+</Style> <Style ss:ID="error">
+<Alignment ss:Horizontal="Center"/>
+<Interior ss:Color="#d04040" ss:Pattern="Solid"/>
+<Font ss:Bold="1"/>
+</Style> <Style ss:ID="header">
+<Alignment ss:Horizontal="Center"/>
+<Font ss:Size="7" ss:Bold="1"/>
+<Interior ss:Color="#d0d0d0" ss:Pattern="Solid"/>
+</Style> <Style ss:ID="Default" ss:Name="Normal">
+<Alignment ss:Vertical="Bottom"/>
+<Borders/>
+<Font ss:FontName="Arial" ss:Size="8"/>
+<Interior/>
+<NumberFormat/>
+<Protection/>
+</Style>
+<Style ss:ID="s__TIMEOFDAY"><NumberFormat ss:Format="Medium Time"/></Style>
+<Style ss:ID="s__DATETIME"><NumberFormat ss:Format="General Date"/></Style>
+<Style ss:ID="s__DATETIMETZ"><NumberFormat ss:Format="General Date"/></Style>
+<Style ss:ID="s__DATE"><NumberFormat ss:Format="Short Date"/>
+</Style><Style ss:ID="s__text"></Style><Style ss:ID="s__currency"><NumberFormat ss:Format="Currency"/></Style>
+<Style ss:ID="s__percent"><NumberFormat ss:Format="Percent"/></Style>
+<Style ss:ID="s1_b_text"><Alignment ss:Indent="1"/><Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8" ss:Color="#000000" ss:Bold="1"/></Style>
+<Style ss:ID="s_b_text"><Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8" ss:Color="#000000" ss:Bold="1"/></Style>
+<Style ss:ID="s2__text"><Alignment ss:Indent="2"/></Style>
+<Style ss:ID="s_b_currency"><Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8" ss:Color="#000000" ss:Bold="1"/><NumberFormat ss:Format="Currency"/></Style>
+<Style ss:ID="s_currency_nosymbol"><Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8" ss:Color="#000000" /><NumberFormat ss:Format="#,##0.00_);[Red]\(#,##0.00\)"/></Style>
+<Style ss:ID="s1__text"><Alignment ss:Indent="1"/></Style>
+<Style ss:ID="s_b_currency_X"><Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="8" ss:Color="#000000" ss:Bold="1"/><Interior ss:Color="#f0e0e0" ss:Pattern="Solid"/><NumberFormat ss:Format="Currency"/></Style>
+<Style ss:ID="s__currency_es_BO"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;Bs&quot;#,##0.00_);(&quot;Bs&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_AU"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;$A&quot;#,##0.00_);(&quot;$A&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_de_CH"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;SwF&quot;#,##0.00_);(&quot;SwF&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_pl_PL"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;Zl&quot;#,##0.00_);(&quot;Zl&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_es_MX"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;MEX$&quot;#,##0.00_);(&quot;MEX$&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_sv_SE"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;SKr&quot;#,##0.00_);(&quot;SKr&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_es_AR"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;Arg$&quot;#,##0.00_);(&quot;Arg$&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_CA"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;Can$&quot;#,##0.00_);(&quot;Can$&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_no_NO"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;NKr&quot;#,##0.00_);(&quot;NKr&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_PH"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;PHP&quot;#,##0.00_);(&quot;PHP&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_ja_JP"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;¥&quot;#,##0.00_);(&quot;¥&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_sh_RS"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;¤&quot;#,##0.00_);(&quot;¤&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_IN"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;0#Rs.|1#Re.|1<Rs.&quot;#,##0.00_);(&quot;0#Rs.|1#Re.|1<Rs.&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_SG"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;S$&quot;#,##0.00_);(&quot;S$&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_GB"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;£&quot;#,##0.00_);(&quot;£&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_US"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;$&quot;#,##0.00_);(&quot;$&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_en_ZA"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;R&quot;#,##0.00_);(&quot;R&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_fr_FR_EURO"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;€&quot;#,##0.00_);(&quot;€&quot;#,##0.00)"/></Style>
+<Style ss:ID="s__currency_pt_BR"><Alignment ss:Vertical="Center" ss:Horizontal="Right"/><NumberFormat ss:Format="&quot;R$&quot;#,##0.00_);(&quot;R$&quot;#,##0.00)"/></Style>
+</Styles>
+<Worksheet ss:Name="MAXProgramInventoryOnHandResul">
+<Table><Row>
+<Cell ss:StyleID="header"><Data ss:Type="String">Name</Data></Cell>
+<Cell ss:StyleID="header"><Data ss:Type="String">Item Description</Data></Cell>
+<Cell ss:StyleID="header"><Data ss:Type="String">Lot/Batch</Data></Cell>
+<Cell ss:StyleID="header"><Data ss:Type="String">Expiration Date</Data></Cell>
+<Cell ss:StyleID="header"><Data ss:Type="String">On Hand</Data></Cell>
+<Cell ss:StyleID="header"><Data ss:Type="String">Available (Not Committed)</Data></Cell>
+<Cell ss:StyleID="header"><Data ss:Type="String">Location</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0524-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 70 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LP2915A1</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">19</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0524-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 70 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MA3448A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">72</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0524-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 70 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MA3449A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">87</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">87</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0524-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 70 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MA3449A1</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">151</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">151</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0527-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 20 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MA3172A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">6</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0527-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 20 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MH3030A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">6</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">6</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LT2837A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">177</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LT2837A1</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">129</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LT2948A3</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-12-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">150</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LT2948A4</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-12-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">137</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MA3170A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">69</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">69</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MB2233A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">336</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">336</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0528-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 50 MG TAB 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MB3279A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">485</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">252</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0852-22</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 100 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MA3175A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">107</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00003-0852-22</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SPRYCEL 100 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MB2283A</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">226</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">51</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0135-01</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">BOSULIF 100 MG 120 TAB</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CN2650</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0135-01</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">BOSULIF 100 MG 120 TAB</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">DW5831</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-12-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">564</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">200</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0151-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">INLYTA 5 MG 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">DM0876</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">16</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">10</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0151-11</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">INLYTA 5 MG 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">DM0877</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">76</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">52</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0770-38</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUTENT 25 MG CAPS 28</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ED3894</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-04-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">61</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">48</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0830-38</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUTENT 37.5 MG CAP 28</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">DN8177</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">113</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">71</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0980-38</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUTENT 50 MG CAP 28</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">DT3337</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">186</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0980-38</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUTENT 50 MG CAP 28</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">EC8873</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">150</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">64</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-0980-38</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUTENT 50 MG CAP 28</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">EC8874</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">36</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">36</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-8140-20</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">XALKORI 250 MG CAP 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">EA0046</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2024-05-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">26</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">20</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC00069-8140-20</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">XALKORI 250 MG CAP 60</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">EJ2353</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2024-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">31</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">31</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SACY6</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1625</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1625</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SFT62</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2020-05-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">45</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">45</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LKA – BAUR – Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUC78</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">210</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">210</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER – Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUX32</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-12-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">379</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">379</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LKA – BAUR</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SX685</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2019-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">410</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">410</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LKA – BAUR – Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYK80</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">85</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYL59</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">3977</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYL60</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2253</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">304</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYL61</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7713</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7713</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYL62</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2974</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYM89</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1205</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYU73</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1330</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1330</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">LKA – BAUR</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYU73</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">6525</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">6525</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717231</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYX71</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1565</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1565</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SACC1</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">170</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">170</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SACC2</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-04-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1238</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1238</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SACC3</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1408</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1408</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SAEY7</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1408</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1408</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SRR71</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-05-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">342</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">342</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHL – CONAC</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SWC79</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">239</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">239</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ARG – UNA SALUD</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SWC79</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ARG – UNA SALUD – Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SWP82</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">104</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">104</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ARG – UNA SALUD</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SWP82</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ARG – UNA SALUD – Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SXL36</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-04-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1584</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PAN-CIE</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYH53</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2508</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2508</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC717235</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYH53</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">296</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PAN-CIE</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WKF47</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">110</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">110</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHL – CONAC</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WKF47</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">12</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">12</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ARG – UNA SALUD</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WNL71</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">3</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">3</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MEX – MARKEN – Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WNL71</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">48</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">48</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ARG – UNA SALUD</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WPE06</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1450</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1450</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PHL – ZUELLIG</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WPE06</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2710</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2710</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">MEX – MARKEN</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WPE07</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2069</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WPY56</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">651</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRH09</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">434</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRH09</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">670</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PAN-CIE</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRH10</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">17824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">4116</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRT37</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9277</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9277</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRT91</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">803</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">803</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRX56</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9600</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9600</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WTE46</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9680</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9680</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC726824</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WTL82</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9680</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">9680</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SADK5</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">400</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">400</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SDP99</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">20</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">20</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">BOL – SABIA</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SHP07</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-05-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">107</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">107</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">BOL – SABIA</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SRT98</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-05-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">14</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">14</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">STM56</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">269</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">269</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUJ21</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-09-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">144</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">144</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SUJ21</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-09-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">4</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">4</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PAN–CIE–Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SWN60</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">48</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SXD05</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-04-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">641</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">641</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SXP08</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-05-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">384</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">384</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SXW89</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">408</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">408</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYF89</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">528</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">528</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP 4(7X4) 112 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYK72</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">288</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">288</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC731319</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">TASIGNA HGC 200MG DUP (7X4) 28 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SJR32</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2021-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">245</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">245</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">BOL – SABIA</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752249</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WNV91</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-02-28T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">24</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752249</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRH49</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7387</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7387</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752249</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRP86</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1718</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">1718</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752249</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRP86</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">27</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752249</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WRX51</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">6975</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752249</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 100MG TRI (6X10) 60 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">WTL81</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">3560</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">26</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SACJ7</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">11017</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SACJ8</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2640</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SAHJ4</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">10975</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">57</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SAHJ5</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2573</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SWR04</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">18</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">18</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL- Quarantine</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SXW32</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-04-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2319</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2319</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYA63</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">4201</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">4201</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYN39</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">10988</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">10988</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYN42</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2608</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2608</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYR23</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">10426</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">10426</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYR38</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">116</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYR38</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2821</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2821</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">IND- ELPL</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYU93</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">11194</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC752250</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC FCT 400MG TRI (3X10) 30 TABS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">SYU94</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-08-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2550</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC761317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">KX2476</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7698</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7698</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC761317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">KX2477</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2071</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2071</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC761317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">KX2478</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2380</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">2380</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC761317</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">GLIVEC HGC 100MG TRI (10X12) 120 CAPS</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">KX2479</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7818</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">7818</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CHE – PLANZER</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC76189-0535-30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">11918752</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">360</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">360</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC76189-0535-30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">11918753</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-03-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">320</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">320</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC76189-0535-30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CDMFY</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">54</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC76189-0535-30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CDTSG</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-10-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">330</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">12</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOC76189-0535-30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">CDWBK</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2023-01-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">728</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">308</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">US 3PL - Charlotte</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOCEU/1/13/839/005</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PR089793</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-06-30T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">192</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">UK- 3PL K&amp;N</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">FOCEU/1/13/839/005</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">ICLUSIG 15 MG TAB 30</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">PR091479</Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="DateTime">2022-07-31T00:00:00</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">444</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="Number">426</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">UK- 3PL K&amp;N</Data></Cell>
+</Row>
+<Row><Cell ss:StyleID="s__text"><Data ss:Type="String">Total</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String"></Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String"></Data></Cell>
+<Cell ss:StyleID="s__DATE"><Data ss:Type="String"></Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">228,101.0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String">143,926.0</Data></Cell>
+<Cell ss:StyleID="s__text"><Data ss:Type="String"></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

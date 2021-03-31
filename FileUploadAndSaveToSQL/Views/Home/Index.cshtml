@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Save", "Home" , FormMethod.Post , new { enctype = "multipart/form-data"}))
+        {
+            @Html.Raw(ViewBag.error)
+            <br />
+            <input type="file" name="excelFile"/>
+            <br />
+            <input type="submit" value="Save" />
+        }
+    </div>   
+</div>
